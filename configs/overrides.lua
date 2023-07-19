@@ -81,4 +81,8 @@ M.telescope = {
   },
 }
 
+M.whichkey = {
+
+}
+
 return M

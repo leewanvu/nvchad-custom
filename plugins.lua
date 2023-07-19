@@ -41,7 +41,18 @@ local plugins = {
   {
     "nvim-telescope/telescope.nvim",
     opts = overrides.telescope,
-  }
+  },
+
+  {
+    "folke/which-key.nvim",
+    config = function (_, opts)
+      dofile(vim.g.base46_cache .. "whichkey")
+      local wk = require("which-key")
+      wk.setup(opts)
+
+      require "custom.configs.which-key"
+    end,
+  },
 
   -- Install a plugin
   -- {
